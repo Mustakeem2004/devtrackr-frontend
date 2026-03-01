@@ -1,0 +1,168 @@
+/* Layout */
+.dashboard {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+}
+
+/* Cards */
+.card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Form */
+.form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+/* Add / Update Button */
+button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e40af;
+}
+
+/* Edit Button */
+.problem-actions button:first-child {
+  background-color: #f59e0b;
+  color: white;
+  margin-right: 5px;
+}
+
+.problem-actions button:first-child:hover {
+  background-color: #d97706;
+}
+
+/* Delete Button */
+.problem-actions button:last-child {
+  background-color: #ef4444;
+  color: white;
+}
+
+.problem-actions button:last-child:hover {
+  background-color: #dc2626;
+}
+
+/* Problem List */
+.problem-list {
+  list-style: none;
+  padding: 0;
+}
+
+.problem-item {
+  background: #ffffff;
+  padding: 12px 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Problem Actions Container */
+.problem-actions {
+  display: flex;
+  gap: 5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .problem-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .problem-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+
+/* Skeleton Loader */
+.skeleton {
+  height: 120px;
+  margin-top: 20px;
+  background: linear-gradient(
+    90deg,
+    #e5e7eb 25%,
+    #f3f4f6 50%,
+    #e5e7eb 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 10px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.list-skeleton {
+  height: 40px;
+  margin-top: 10px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
